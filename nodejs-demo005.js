@@ -21,7 +21,12 @@ var fs = require('fs');
 // });
 
 
-fs.unlink('nodejs-demo003.html', err=> {
+// fs.unlink('nodejs-demo003.html', err=> {
+//     if(err) throw err;
+//     console.log('deleted..');
+// });
+
+fs.rename('nodejs-demo003.html', 'nodejs-demo003.txt', err=> {
     if(err) throw err;
-    console.log('deleted..');
-});
+    console.log('renamed...');
+})
