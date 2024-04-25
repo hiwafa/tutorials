@@ -15,7 +15,13 @@ var fs = require('fs');
 //   console.log('Saved!');
 // });
 
-fs.writeFile('nodejs-demo003.html', 'Hi dear, how are you?', function(err) {
+// fs.writeFile('nodejs-demo003.html', 'Hi dear, how are you?', function(err) {
+//     if(err) throw err;
+//     console.log('saved..')
+// });
+
+
+fs.unlink('nodejs-demo003.html', err=> {
     if(err) throw err;
-    console.log('saved..')
+    console.log('deleted..');
 });
